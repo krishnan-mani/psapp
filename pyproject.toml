@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "psapp"
+version = "0.1.0"
+description = "for a delightful DX working with AWS Parameter Store"
+authors = ["Krishnan M <km@krishnanm.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+boto3 = {extras = ["ssm"], version = "^1.33.5"}
+
+[tool.poetry.group.dev.dependencies]
+moto = "^4.2.10"
+pytest = "^7.4.3"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
