@@ -1,0 +1,5 @@
+- launch an interactive terminal-based client
+- make choices about a profile and region
+- make other choices about user preferences
+- enter one or more commands and receive responses
+- enter more commands, or quit
