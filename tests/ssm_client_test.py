@@ -1,6 +1,8 @@
-import boto3
+from psapp import ps
 
+import boto3
 from moto import mock_ssm
+
 
 @mock_ssm
 def test_ssm_get_parameter():
@@ -9,5 +11,6 @@ def test_ssm_get_parameter():
                          Value="bar",
                          Type='String')
 
-    response = client.get_parameter(Name="foo")
+    ps_client = ps.PS(client)
+    response = ps_client.get_parameter("foo")
     assert "bar" == response["Parameter"]["Value"]
