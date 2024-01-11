@@ -10,9 +10,9 @@ python = "^3.11"
 boto3 = {extras = ["ssm"], version = "^1.33.5"}
 
 [tool.poetry.group.dev.dependencies]
-moto = "^4.2.10"
 pytest = "^7.4.3"
 pre-commit = "^3.6.0"
+moto = {extras = ["ssm"], version = "^4.2.13"}
 
 [tool.pytest.ini_options]
 pythonpath = "src"
